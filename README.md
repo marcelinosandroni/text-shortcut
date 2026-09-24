@@ -31,6 +31,7 @@ A arquitetura é estrita e desenhada para hiperfoco e isolamento de contexto. Le
 - 🗺️ **Visão Macro:** [specs/ROADMAP.md](./specs/ROADMAP.md)
 - 📝 **Histórico de Mudanças:** [docs/CHANGELOG.md](./docs/CHANGELOG.md)
 - 🤖 **Leis do Agente:** [AGENTS.md](./AGENTS.md)
+- 🎨 **Regras de UI/UX:** [DESIGN.md](./DESIGN.md)
 
 ---
 
@@ -99,6 +100,7 @@ quickfill/
 ├── 🧠 APP.md                 # Descrição do app
 ├── 🏗️ ARCHITECTURE.md        # Arquitetura global
 ├── 💅 REACT.md               # Regras do frontend
+├── 🎨 DESIGN.md              # Regras de UI/UX (LEIA SEMPRE!)
 │
 ├── docs/                     # Documentação do produto
 │   ├── PRODUCT.md            # Detalhes do produto
@@ -134,10 +136,11 @@ quickfill/
 1. **Leia AGENTS.md** — Entenda suas leis absolutas
 2. **Leia docs/PRODUCT.md e APP.md** — Entenda o produto
 3. **Leia REACT.md** — Entenda as regras de código
-4. **Leia specs/PLAN.md** — Descubra sua tarefa atual
-5. **Execute a tarefa** — Siga o ciclo: Refinar → Implementar → Testar → Concluir
-6. **Atualize docs/CHANGELOG.md** — Registre suas mudanças
-7. **NÃO avance** — Encerre após concluir a tarefa atual
+4. **Leia DESIGN.md** — Entenda as regras de UI/UX (SEMPRE que for criar/modificar componentes visuais)
+5. **Leia specs/PLAN.md** — Descubra sua tarefa atual
+6. **Execute a tarefa** — Siga o ciclo: Refinar → Implementar → Testar → Concluir
+7. **Atualize docs/CHANGELOG.md** — Registre suas mudanças
+8. **NÃO avance** — Encerre após concluir a tarefa atual
 
 ### Para Desenvolvedores
 
@@ -145,7 +148,7 @@ quickfill/
 2. `npm install`
 3. `npm run dev`
 4. Leia a documentação em `docs/` e `specs/`
-5. Siga as regras em `REACT.md` e `ARCHITECTURE.md`
+5. Siga as regras em `REACT.md`, `ARCHITECTURE.md` e `DESIGN.md`
 
 ---
 
@@ -171,11 +174,20 @@ npm run test:e2e
 
 ## 🎨 Design System
 
+> 📖 **Leia [DESIGN.md](./DESIGN.md) para regras completas de UI/UX**
+
 ### Tema Preto Minimalista
 - **Background:** `#000000` (preto puro)
 - **Foreground:** `#FAFAFA` (branco suave)
 - **Componentes:** shadcn/ui
 - **Acessibilidade:** WCAG 2.1 AA
+
+### Regras Principais
+- **DARK MODE ONLY** - Nada de telas brancas
+- **shadcn/ui + TailwindCSS** - Proibido outras libs de UI
+- **Zero firula** - Interface limpa e direta
+- **Feedback imediato** - Loading, toasts, micro-interações
+- **Foco único** - Uma tela = Um objetivo principal
 
 ---
 
