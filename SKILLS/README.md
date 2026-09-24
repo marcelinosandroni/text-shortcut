@@ -140,15 +140,47 @@ echo "✅ Component ${COMPONENT_NAME} created successfully!"
 
 ## 📚 Catálogo de Skills
 
-### Disponíveis
-_(Nenhuma skill criada ainda - comece a criar!)_
+### ✅ Disponíveis
+
+#### 🧹 cleanup
+Limpa cache, node_modules e build para um ambiente limpo.
+```bash
+./SKILLS/cleanup/cleanup.sh
+```
+
+#### 🧪 run-all-tests
+Executa todos os testes (unitários e E2E) em sequência.
+```bash
+./SKILLS/run-all-tests/run-all-tests.sh
+```
+
+#### 🔄 rewrite-commits
+Conjunto de scripts para gerenciar e reescrever commits com as credenciais corretas.
+```bash
+# Verificar commits com autores errados
+./SKILLS/rewrite-commits/check-commits.sh
+
+# Configurar git com credenciais corretas
+./SKILLS/rewrite-commits/configure-git.sh
+
+# Reescrever últimos N commits (rápido)
+./SKILLS/rewrite-commits/quick-rewrite.sh 5
+
+# Reescrever commits de um autor específico
+./SKILLS/rewrite-commits/rewrite-commits.sh --author "Qwen"
+```
+
+**Scripts incluídos:**
+- `check-commits.sh` - Verifica se há commits com autores errados
+- `configure-git.sh` - Configura git com credenciais do AGENTS.md
+- `quick-rewrite.sh` - Reescreve rapidamente os últimos N commits
+- `rewrite-commits.sh` - Script principal para reescrita completa
 
 ### Em Desenvolvimento
 _(Adicione skills aqui enquanto desenvolve)_
 
-### Planejadas
+### 📝 Planejadas
 - create-snippet-view
-- run-all-tests
 - generate-mock-data
 - check-accessibility
 - build-and-deploy
