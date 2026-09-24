@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 # 🤖 Text Shortcut - Spec-Driven Development
-=======
-# 🤖 QuickFill - Smart Text Expansion
->>>>>>> d3c9afe (task snapshot daa3fddb-afec-47ec-8dba-5f4c52e566fc)
 
 > **Type less, say more.** Aplicação web de expansão de texto que substitui automaticamente abreviações por textos completos.
 
