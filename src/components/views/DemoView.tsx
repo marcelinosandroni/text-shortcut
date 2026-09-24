@@ -41,13 +41,15 @@ export default function DemoView() {
     const key = e.key;
     
     if (triggerChars.includes(key) || key === ' ' || key === 'Tab' || key === 'Enter') {
-      const currentText = inputText;
-      const snippet = checkExpansion(currentText, key);
+      // Adiciona o caractere trigger ao texto atual para verificar
+      const textWithTrigger = inputText + key;
+      const snippet = checkExpansion(textWithTrigger, key);
       
       if (snippet) {
         e.preventDefault();
         const abbr = snippet.abbreviation;
-        const newText = currentText.slice(0, -abbr.length) + snippet.expansionText;
+        // Remove a abreviação (não inclui o trigger) e adiciona a expansão + trigger
+        const newText = inputText.slice(0, -abbr.length) + snippet.expansionText + key;
         setInputText(newText);
         recordExpansion(snippet.id);
       }
