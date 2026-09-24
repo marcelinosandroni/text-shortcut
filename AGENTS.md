@@ -10,11 +10,18 @@
 Sempre que for acionado, leia os seguintes arquivos nesta exata ordem:
 1. `docs/PRODUCT.md` e `APP.md`: Regras de negócio.
 2. `REACT.md`: Arquitetura do Frontend.
-3. `specs/PLAN.md`: Sua ÚNICA próxima tarefa pendente.
+3. `DESIGN.md`: Regras de UI/UX (LEIA SEMPRE que for criar ou modificar qualquer componente visual).
+4. `specs/PLAN.md`: Sua ÚNICA próxima tarefa pendente.
 
 **⚠️ REGRA DE PERMISSÃO DE DOCS:**
 - Você DEVE atualizar o `docs/CHANGELOG.md` e o `docs/PRODUCT.md` automaticamente após qualquer nova funcionalidade.
-- Você está **ESTRITAMENTE PROIBIDO** de modificar o `APP.md`, `ARCHITECTURE.md` ou `REACT.md` por conta própria. Se você identificar uma melhoria nessas arquiteturas, **PERGUNTE** ao usuário primeiro.
+- Você está **ESTRITAMENTE PROIBIDO** de modificar o `APP.md`, `ARCHITECTURE.md`, `REACT.md` ou `DESIGN.md` por conta própria. Se você identificar uma melhoria nessas arquiteturas, **PERGUNTE** ao usuário primeiro.
+
+**🎨 REGRA DE UI/UX:**
+- **SEMPRE** consulte `DESIGN.md` antes de criar ou modificar qualquer componente visual.
+- Siga rigorosamente as regras de estilo visual, UI e UX definidas em `DESIGN.md`.
+- Use **APENAS** `shadcn/ui` + TailwindCSS. Proibido instalar outras libs de UI.
+- Tema **DARK MODE ONLY**. Zero firula. Interface limpa e direta.
 
 ## 3. 🔄 O FLUXO DE ENTREGA (Gated Workflow)
 Ao encontrar a sua tarefa pendente no `specs/tasks/`, execute:
