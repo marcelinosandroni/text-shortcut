@@ -1,7 +1,6 @@
-# 🤖 QuickFill - Spec-Driven Development
+# 🤖 QuickFill - Smart Text Expansion
 
-> **Smart Text Expansion for Windows** — Type less, say more.
-> Aplicação web que permite criar atalhos de texto personalizados que expandem automaticamente quando digitados.
+> **Type less, say more.** Aplicação web de expansão de texto que substitui automaticamente abreviações por textos completos.
 
 ---
 
@@ -11,7 +10,7 @@ Você está operando em um ambiente de **Desenvolvimento Guiado por Especificaç
 
 **NÃO** inicie nenhuma análise de código, **NÃO** crie arquivos e **NÃO** sugira implementações antes de ler OBRIGATORIAMENTE o arquivo `AGENTS.md` na raiz deste projeto.
 
-O `AGENTS.md` contém suas leis de funcionamento e o fluxo de trabalho exato que você deve seguir. **Leia-o agora.**
+O `AGENTS.md` contém suas **LEIS ABSOLUTAS** e o fluxo de trabalho exato que você deve seguir. **Leia-o agora.**
 
 ---
 
@@ -19,17 +18,47 @@ O `AGENTS.md` contém suas leis de funcionamento e o fluxo de trabalho exato que
 
 A arquitetura é estrita e desenhada para hiperfoco e isolamento de contexto. Leia antes de codar:
 
-| Arquivo | Descrição |
-|---------|-----------|
-| 🧠 [APP.md](./APP.md) | O que é este app e stack |
-| 🎯 [specs/PLAN.md](./specs/PLAN.md) | O que estamos fazendo AGORA (Foco) |
-| 🏗️ [ARCHITECTURE.md](./ARCHITECTURE.md) | Arquitetura Global |
-| 💅 [REACT.md](./REACT.md) | Regras do Frontend (React/Vite) |
-| 📥 [specs/BACKLOG.md](./specs/BACKLOG.md) | Ideias Soltas e Débito Técnico |
-| 🗺️ [specs/ROADMAP.md](./specs/ROADMAP.md) | Visão Macro |
-| 📦 [docs/PRODUCT.md](./docs/PRODUCT.md) | Detalhes do Produto |
-| 📝 [docs/CHANGELOG.md](./docs/CHANGELOG.md) | Histórico de Mudanças |
-| 🤖 [AGENTS.md](./AGENTS.md) | Regras de Funcionamento do Agente |
+- 🧠 **O que é este app e stack:** [APP.md](./APP.md)
+- 📦 **Detalhes do Produto:** [docs/PRODUCT.md](./docs/PRODUCT.md)
+- 🎯 **O que estamos fazendo AGORA (Foco):** [specs/PLAN.md](./specs/PLAN.md)
+- 🏗️ **Arquitetura Global:** [ARCHITECTURE.md](./ARCHITECTURE.md)
+- 💅 **Regras do Frontend (React):** [REACT.md](./REACT.md)
+- 📥 **Ideias Soltas e Débito Técnico:** [specs/BACKLOG.md](./specs/BACKLOG.md)
+- 🗺️ **Visão Macro:** [specs/ROADMAP.md](./specs/ROADMAP.md)
+- 📝 **Histórico de Mudanças:** [docs/CHANGELOG.md](./docs/CHANGELOG.md)
+- 🤖 **Leis do Agente:** [AGENTS.md](./AGENTS.md)
+
+---
+
+## 🚀 QuickFill
+
+QuickFill é uma aplicação web que permite criar atalhos de texto personalizados que expandem automaticamente quando digitados, economizando tempo em formulários e textos repetitivos.
+
+### Exemplo
+Digite `mnm` + espaço → Expande para `Marcelino Sandroni`  
+Digite `myemail` + espaço → Expande para `marcelino.sandroni@gmail.com`
+
+### Features
+- ✅ CRUD completo de snippets
+- ✅ Sistema de categorias
+- ✅ Busca e filtros
+- ✅ Demo de expansão em tempo real
+- ✅ Import/Export (JSON/CSV)
+- ✅ Configurações avançadas
+- ✅ Persistência local (IndexedDB)
+- ✅ Tema preto minimalista
+
+---
+
+## 🛠️ Stack Principal
+
+- **Framework:** React 18 + TypeScript
+- **Build Tool:** Vite
+- **Styling:** Tailwind CSS + shadcn/ui
+- **State Management:** React Context + IndexedDB
+- **Testing:** Vitest (unit) + Playwright (E2E)
+- **Icons:** Lucide React
+- **Design:** Tema preto minimalista
 
 ---
 
@@ -58,23 +87,11 @@ npm run test:e2e       # Testes E2E (Playwright)
 
 ---
 
-## 🛠️ Stack Principal
-
-- **Framework:** React 18 + TypeScript
-- **Build Tool:** Vite
-- **Styling:** Tailwind CSS + shadcn/ui
-- **State Management:** React Context + IndexedDB
-- **Testing:** Vitest (unit) + Playwright (E2E)
-- **Icons:** Lucide React
-- **Design:** Tema preto minimalista
-
----
-
 ## 📂 Estrutura do Projeto
 
 ```text
 quickfill/
-├── 🤖 AGENTS.md              # Regras do agente (LEIA PRIMEIRO!)
+├── 🤖 AGENTS.md              # Leis do agente (LEIA PRIMEIRO!)
 ├── 🧠 APP.md                 # Descrição do app
 ├── 🏗️ ARCHITECTURE.md        # Arquitetura global
 ├── 💅 REACT.md               # Regras do frontend
@@ -87,7 +104,10 @@ quickfill/
 │   ├── PLAN.md               # Plano de tarefas atual
 │   ├── BACKLOG.md            # Backlog de ideias
 │   ├── ROADMAP.md            # Visão macro
-│   └── tasks/                # Tarefas individuais
+│   ├── tasks/                # Tarefas individuais
+│   └── history/              # Histórico de fases
+│
+├── SKILLS/                   # Automações e scripts
 │
 ├── src/                      # Código fonte
 │   ├── components/
@@ -98,7 +118,6 @@ quickfill/
 │   └── test/                # Testes unitários
 │
 ├── e2e/                     # Testes E2E
-├── dist/                    # Build de produção
 └── package.json
 ```
 
@@ -108,12 +127,13 @@ quickfill/
 
 ### Para Agentes de IA
 
-1. **Leia AGENTS.md** — Entenda suas regras
-2. **Leia APP.md** — Entenda o produto
+1. **Leia AGENTS.md** — Entenda suas leis absolutas
+2. **Leia docs/PRODUCT.md e APP.md** — Entenda o produto
 3. **Leia REACT.md** — Entenda as regras de código
 4. **Leia specs/PLAN.md** — Descubra sua tarefa atual
 5. **Execute a tarefa** — Siga o ciclo: Refinar → Implementar → Testar → Concluir
-6. **NÃO avance** — Encerre após concluir a tarefa atual
+6. **Atualize docs/CHANGELOG.md** — Registre suas mudanças
+7. **NÃO avance** — Encerre após concluir a tarefa atual
 
 ### Para Desenvolvedores
 
@@ -153,14 +173,6 @@ npm run test:e2e
 - **Componentes:** shadcn/ui
 - **Acessibilidade:** WCAG 2.1 AA
 
-### Componentes Disponíveis
-- Button (6 variantes)
-- Card (com header, title, description, content, footer)
-- Input, Textarea, Label
-- Switch (toggle)
-- Dialog (modal)
-- Select (dropdown)
-
 ---
 
 ## 📊 Métricas
@@ -176,24 +188,38 @@ npm run test:e2e
 
 ---
 
-## 📝 Especificações do Produto
+## 📝 Versionamento
 
-O projeto QuickFill possui 8 documentos de especificação na pasta `docs/`:
+Este projeto segue **Semantic Versioning (SemVer)** com **Gitflow**.
 
-1. **PRD** — Product Requirements Document
-2. **Functional Requirements** — 17 requisitos funcionais
-3. **Non-Functional Requirements** — 42 atributos de qualidade
-4. **User Stories** — 18 histórias de usuário
-5. **Technical Architecture** — Stack e modelo de dados
-6. **Roadmap** — Plano de 12 meses
-7. **Interface Design** — Wireframes e design tokens
-8. **UI/UX Specification** — Design system completo
+### Padrão de Commit
+```
+[tipo](escopo): descrição curta. (Agent: [Ferramenta] - [Modelo])
+```
+
+**Exemplo:**
+```
+feat(snippets): implementa CRUD de snippets (Agent: Claude - 3.5-Sonnet)
+```
+
+### Tipos
+- `feat:` Nova funcionalidade
+- `fix:` Correção de bug
+- `docs:` Documentação
+- `style:` Formatação
+- `refactor:` Refatoração
+- `test:` Testes
+- `chore:` Manutenção
 
 ---
 
 ## 👨‍💻 Autor
 
-[Marcelino Sandroni](https://github.com/marcelinosandroni)
+**Marcelino Sandroni**  
+📧 marcelino.sandroni@gmail.com  
+🔗 [GitHub](https://github.com/marcelinosandroni)
+
+---
 
 ## 📄 Licença
 
